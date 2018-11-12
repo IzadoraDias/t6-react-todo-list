@@ -1,0 +1,20 @@
+import React from 'react'
+import  './button.css'
+
+function Button (props){
+    let classes = 'button' 
+ 
+    if(props.disable){
+        classes += 'button--disable'
+    }
+
+    return(
+     <button disabled={props.disable} className={classes}>
+     {props.children}
+     </button>
+    )
+ }
+
+
+
+export default Button 
