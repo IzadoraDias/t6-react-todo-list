@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import Input from './components/form/input/input'
+import Input from './components/form/input'
 import Label from './components/form/label/label'
 import Link from './components/form/link/link'
 import Form from './components/form/form'
-import Button from './components/form/button/button'
+import Button from './components/form/button/'
 
 import * as serviceWorker from './serviceWorker';
 
@@ -18,7 +18,6 @@ const component = <Form title='Login' text='Entre com Seu email e Senha'>
     <Button disabled>Enviar</Button>
     <Link href='#'>Criar uma conta</Link>
 
-   
 </Form>
 
 
