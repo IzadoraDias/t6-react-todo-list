@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import Input from './input'
-import Label from './label'
-import Link from './link'
-import Form from './form'
-import Button from './button'
+import Input from './components/form/input/input'
+import Label from './components/form/label/label'
+import Link from './components/form/link/link'
+import Form from './components/form/form'
+import Button from './components/form/button/button'
 
 import * as serviceWorker from './serviceWorker';
 
@@ -15,7 +15,7 @@ const component = <Form title='Login' text='Entre com Seu email e Senha'>
     <Input id='Email' type='text'/>
     <Label htmlFor='password'>Senha</Label>
     <Input id='password' type='text'/>
-    <Button desable>Enviar</Button>
+    <Button disabled>Enviar</Button>
     <Link href='#'>Criar uma conta</Link>
 
    

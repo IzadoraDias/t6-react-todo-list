@@ -4,12 +4,15 @@ import  './button.css'
 function Button (props){
     let classes = 'button' 
  
-    if(props.disable){
-        classes += 'button--disable'
+    if(props.disabled){
+        classes += ' button--disabled'
     }
 
     return(
-     <button disabled={props.disable} className={classes}>
+     <button type= 'button'
+     className={classes}
+     disabled={props.disabled}>
+     
      {props.children}
      </button>
     )
