@@ -1,4 +1,8 @@
 import React from 'react'
+import Button from './button'
+import Input from './input'
+import Label from './label'
+import Link from './link'
 
 import './form.css'
 
@@ -11,5 +15,10 @@ function Form(props) {
         </form>
     )
 }
+
+Form.Button = Button 
+Form.Input = Input
+Form.Label = Label
+form.Link = Link 
 
 export default Form

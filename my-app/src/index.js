@@ -5,7 +5,7 @@ import Input from './components/form/input'
 import Label from './components/form/label/label'
 import Link from './components/form/link/link'
 import Form from './components/form/form'
-import Button from './components/form/button/'
+
 
 import * as serviceWorker from './serviceWorker';
 
@@ -15,7 +15,7 @@ const component = <Form title='Login' text='Entre com Seu email e Senha'>
     <Input id='Email' type='text'/>
     <Label htmlFor='password'>Senha</Label>
     <Input id='password' type='text'/>
-    <Button disabled>Enviar</Button>
+    <Form.Button disabled>Enviar</Form.Button>
     <Link href='#'>Criar uma conta</Link>
 
 </Form>
