@@ -8,9 +8,9 @@ function Login() {
         <Container>
             <Form title='Login' text='Entre com Seu email e Senha'>
                 <Form.Label htmlFor='Email'>Email</Form.Label>
-                <Form.Input id='Email' type='text' />
+                <Form.Input id='Email' type='email' required/>
                 <Form.Label htmlFor='password'>Senha</Form.Label>
-                <Form.Input id='password' type='text' />
+                <Form.Input id='password' type='password' minLength={6} required/>
                 <Form.Button disabled>Enviar</Form.Button>
                 <Form.Link href='#'>Criar uma conta</Form.Link>
             </Form>
