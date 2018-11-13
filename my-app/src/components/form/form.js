@@ -8,7 +8,7 @@ import './form.css'
 
 function Form(props) {
     return (
-        <form>         
+        <form className='form'>         
             <h2 className='form__title'>{props.title}</h2>              
             <p className='form__text'>{props.text}</p>
             {props.children}
@@ -19,6 +19,6 @@ function Form(props) {
 Form.Button = Button 
 Form.Input = Input
 Form.Label = Label
-form.Link = Link 
+Form.Link = Link 
 
 export default Form

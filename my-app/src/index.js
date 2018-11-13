@@ -1,27 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import Input from './components/form/input'
-import Label from './components/form/label/label'
-import Link from './components/form/link/link'
-import Form from './components/form/form'
+import Login from './pages/login'
 
 
 import * as serviceWorker from './serviceWorker';
 
 
-const component = <Form title='Login' text='Entre com Seu email e Senha'>
-    <Label htmlFor='Email'>Email</Label>
-    <Input id='Email' type='text'/>
-    <Label htmlFor='password'>Senha</Label>
-    <Input id='password' type='text'/>
-    <Form.Button disabled>Enviar</Form.Button>
-    <Link href='#'>Criar uma conta</Link>
-
-</Form>
-
-
-ReactDOM.render(component, document.getElementById('root'));
+ReactDOM.render(<Login/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

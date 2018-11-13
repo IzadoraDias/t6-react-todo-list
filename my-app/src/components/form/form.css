@@ -1,5 +1,6 @@
 .form {
     font-family: monospace;
+    font-weight: bold;
 }
 .form__title {
     color: #9351b4;
