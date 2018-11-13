@@ -26,7 +26,6 @@ class Input extends React.Component {
         }
     }
 
-
     handleChange = (e) => {
         const value = e.target.value
         let message = ''
