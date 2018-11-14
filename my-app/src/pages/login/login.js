@@ -47,7 +47,7 @@ onDisabledButton = () => {
                 <Form.Label htmlFor='password'>Senha</Form.Label>
                 <Form.Input ref={this.password} id='password' type='password' onChange={this.onDisabledButton} minLength={6} required/>
                 <Form.Button disabled={this.state.disabled}>Enviar</Form.Button>
-                <Form.Link href='#'>Criar uma conta</Form.Link>
+                <Form.Link href='/conta'>Criar uma conta</Form.Link>
             </Form>
         </Container>
         )
