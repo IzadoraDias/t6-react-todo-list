@@ -19,7 +19,7 @@ class Input extends React.Component {
     }
 
     hasError = () => {
-        if (this.state.message) {
+        if (this.state.message == null || this.state.message !== '') {
             return true
         } else {
             return false
@@ -39,7 +39,7 @@ class Input extends React.Component {
         } else if (this.props.type === 'email' && !regex.test(value)) {
             message = `Digite um e-mail válido`
         }
-        this.setState({ message: message }, this.props.onChange())
+        this.setState({ message: message }, this.props.onChange)
     }
 
     render() {
