@@ -2,7 +2,6 @@ import React from 'react'
 import Form from '../../components/form'
 import Container from '../../components/container'
 
-
 // function Signup() {
 //     return (
 //         <Container>
@@ -49,8 +48,6 @@ onDisabledButton = () => {
     }
 }
 
-
- 
 render(){
     return (
         <Container>
@@ -70,13 +67,6 @@ render(){
     )
  }
 }
-
-
-
-
-
-
-
 
 export default Signup
 
