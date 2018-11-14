@@ -1,12 +1,15 @@
 import React from 'react'
-import './pageNotFound.js'
+import './pageNotFound.css'
+import NotFoundImage from './notFound.jpeg'
 
 
 function PageNotFound() {
 
     return (
-        <div class="pageNotFound">
-            <h1>Page Not Found </h1>
+        <div className="page-not-found">
+            <h1>Página não encontrada</h1>
+            
+            <img src={NotFoundImage}/>
         </div>
 
     )
