@@ -31,16 +31,15 @@ class Input extends React.Component {
         let message = ''
         const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-        console.log(value)
         if (this.props.required && value.trim() === '') {
             message = 'Campo Obrigatótio'
-        } else if (this.props.minLength && value.length < this.props.minLength) {
+        } else if ( value && this.props.minLength && value.length < this.props.minLength) {
             message = `Digite pelo menos ${this.props.minLength} caracteres`
         } else if (this.props.type === 'email' && !regex.test(value)) {
             message = `Digite um e-mail válido`
         }
         this.setState({ message: message }, this.props.onChange)
-    }
+    } 
 
     render() {
         return (
