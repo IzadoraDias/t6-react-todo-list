@@ -31,7 +31,7 @@ class Menu extends React.Component {
                     Menu
                 </a>
 
-                <ul className={classesOfOptions}>
+                <ul className={classesOfOptions} onClick={this.handleOpenOrClose}>
 
                     <li>
                         <Link to='/quem-somos'>
