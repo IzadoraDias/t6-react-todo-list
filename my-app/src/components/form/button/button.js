@@ -9,7 +9,7 @@ function Button (props){
     }
 
     return(
-     <button type= 'button'
+     <button 
      className={classes}
      disabled={props.disabled}>
      

@@ -22,7 +22,6 @@ class Menu extends React.Component {
 
             classesOfButton += ' menu__button--open'
             classesOfOptions += ' menu__options--open'
-
         }
 
         return (

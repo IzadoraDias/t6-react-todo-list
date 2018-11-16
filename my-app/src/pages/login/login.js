@@ -38,10 +38,16 @@ onDisabledButton = () => {
     }
 }
 
+handleSubmit = (e) =>{
+    e.preventDefault()
+
+    console.log("hello submit")
+}
+
     render(){
         return (
             <Container>
-            <Form title='Login' text='Entre com Seu email e Senha'>
+            <Form title='Login' text='Entre com Seu email e Senha' onSubmit={this.handleSubmit}>
                 <Form.Label htmlFor='Email'>Email</Form.Label>
                 <Form.Input ref={this.email} id='Email' type='email' onChange={this.onDisabledButton} required/>
                 <Form.Label htmlFor='password'>Senha</Form.Label>
