@@ -3,5 +3,5 @@ import { storiesOf} from '@storybook/react'
 import Button from './index'
 
 
-storiesOf('Button', module)
+storiesOf('Components/Form/Button', module)
  .add('default', () => (<Button> Children Here </Button>))
