@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Menu from './menu'
 import  logo from './logo-reprograma.png'
 import './navbar.css'
- 
-const Navbar = () => (
+
+ const Navbar = () => (
     <nav className='navbar'>
      <Link to= '/'>
       <img 
@@ -12,6 +13,8 @@ const Navbar = () => (
         alt='Reprograma'
         />
      </Link>
+
+     <Menu/>
 
     </nav>
 )
