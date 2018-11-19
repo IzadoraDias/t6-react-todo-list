@@ -1,6 +1,7 @@
 import React from 'react'
 import Form from '../../components/form'
 import Container from '../../components/container'
+import { setUser } from '../../infra/local-storage'
 import { signupUser } from '../../apis/signup.api'
 
 // function Signup() {
@@ -38,6 +39,7 @@ class Signup extends React.Component {
         const inputEmail = this.email.current
         const inputPhone = this.email.current
         const inputPassword = this.password.current
+        
         const user = {
             name: inputName.getValue(),
             email: inputEmail.getValue(),
@@ -45,9 +47,9 @@ class Signup extends React.Component {
             password: inputPassword.getValue()
         }
 
-
         signupUser(user)
             .then((response) => {
+                setUser({email: user.email})
                 this.props.history.push('/')
             })
             .catch((error) => {

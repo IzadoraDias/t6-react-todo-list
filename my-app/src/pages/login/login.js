@@ -53,8 +53,10 @@ class Login extends React.Component {
         loginUser(user)
             .then((response) => {
                 setUser(user)
+                setUser({ email: user.email })
                 this.props.history.push('/')
             })
+
             .catch((error) => {
                 console.log(error)
             })
