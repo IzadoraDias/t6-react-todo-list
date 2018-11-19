@@ -9,5 +9,4 @@ export function loginUser(user){
    }
 
    return api().post(url,data)
-
 }

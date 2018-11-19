@@ -36,7 +36,7 @@ class Signup extends React.Component {
         e.preventDefault()
         const inputName = this.name.current
         const inputEmail = this.email.current
-        const inputPhone = this.email.phone
+        const inputPhone = this.email.current
         const inputPassword = this.password.current
         const user = {
             name: inputName.getValue(),
@@ -74,7 +74,7 @@ class Signup extends React.Component {
     render() {
         return (
             <Container>
-                <Form title='Sign up' text='Preencha com o seu cadastro'>
+                <Form title='Sign up' text='Preencha com o seu cadastro' onSubmit={this.handleSubmit}>
                     <Form.Label htmlFor='Name'>Nome</Form.Label>
                     <Form.Input ref={this.name} id='Name' type='text' onChange={this.onDisabledButton} required />
                     <Form.Label htmlFor='Email'>Email</Form.Label>
