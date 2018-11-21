@@ -15,18 +15,18 @@ class Postit extends React.Component {
         }
     }
 
-handlePostitClick = () => {
-    console.log('handlePostitClick')
-    this.setState({
-        editing: true
-    })
-}
+    handlePostitClick = () => {
+        console.log('handlePostitClick')
+        this.setState({
+            editing: true
+        })
+    }
     handlePostitRemove = () => {
         console.log('handlePostitremove')
     }
 
     handlePostitSubmit = (e) => {
-        e.preventDefaul()
+        e.preventDefault()
         const postit = {
             title: this.state.title,
             text: this.state.text
@@ -50,45 +50,49 @@ handlePostitClick = () => {
     setText = (e) => {
         const inputText = e.target.value
         this.setState({
-            tex: inputText//
+            text: inputText
         })
     }
 
 
-        render() {
-            return (
-                <div onClick={this.handlePostitClick} className='postit'>
+    render() {
+        return (
+            <div onClick={this.handlePostitClick} className='postit'>
 
-                    <Form onSubmit={this.handlePostitSubmit}>
-                        {this.state.editing && (
-                            <button onClick={this.handlePostitRemove}
-                                className='postit__button-remove'>
-                                X
+                <Form onSubmit={this.handlePostitSubmit}>
+                    {this.state.editing && (
+                        <button onClick={this.handlePostitRemove}
+                            className='postit__button-remove'>
+                            X
                              </button>
-                        )
-                        }
-                        <input type='text'
-                            className='postit__title'
-                            placeholder="Título"
-                            value={this.state.title}
-                            onChange={this.setTitle}
-                        />
+                    )
+                    }
+                    <input type='text'
+                        className='postit__title'
+                        placeholder="Título"
+                        value={this.state.title}
+                        onChange={this.setTitle}
+                    />
 
-                        <textarea
-                            className='postit__text'
-                            placeHolder='Digite o texto...'
-                            name='text'
-                            value={this.state.text}
-                            onChange={this.setText}
-                        />
-                        <button className='postit__button-completed'>
-                            Concluído
+                    <textarea
+                        className='postit__text'
+                        placeHolder='Digite o texto...'
+                        name='text'
+                        value={this.state.text}
+                        onChange={this.setText}
+                    />
+                    <button className='postit__button-completed'>
+                        Concluído
                      </button>
-                    </Form>
-                </div>
-            )
-        }
+                </Form>
+            </div>
+        )
     }
 
+    getPostit = () => {
 
-    export default Postit
+    }
+}
+
+
+export default Postit
