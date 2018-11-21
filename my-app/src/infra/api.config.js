@@ -7,10 +7,7 @@ const config = {
 
 function api (){
     
- config.headers = {
-     user: ''
- }
-    return axios.create(config)
+   return axios.create(config)
 }
 
 export function startServer(){

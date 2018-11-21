@@ -5,3 +5,7 @@ export function getUser(){
 export function setUser(user){
     localStorage.setItem('user', JSON.stringify(user))
 }
+
+export function clearUser(){
+    localStorage.clear()
+}
