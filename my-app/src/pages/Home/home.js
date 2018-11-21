@@ -1,6 +1,7 @@
 import React from 'react'
 import { getUser } from '../../infra/local-storage'
 import { Redirect } from 'react-router-dom'
+import Postit from '../../components/posttit'
 
 class Home extends React.Component {
     constructor(){
@@ -14,7 +15,9 @@ class Home extends React.Component {
     // }
     render(){
         if(getUser()){
-             return <div>Hello Home</div>   
+             return <Postit>
+
+             </Postit>   
         }else{
              return <Redirect to='/login' />
         }

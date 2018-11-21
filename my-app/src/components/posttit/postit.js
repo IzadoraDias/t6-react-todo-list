@@ -1,35 +1,43 @@
 import React from 'react'
 import './postit.css'
 import Form from '../form'
+import { createPostit } from '../../apis/postit.api';
 
 
-class PostIt extends React.Component {
+class Postit extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             id: 0,
             title: '',
-            text: '', 
+            text: '',
             editing: false
         }
     }
-}
+
 handlePostitClick = () => {
     console.log('handlePostitClick')
     this.setState({
         editing: true
     })
-
+}
     handlePostitRemove = () => {
-
+        console.log('handlePostitremove')
     }
 
-    handlePostitsubmit = () => {
+    handlePostitSubmit = (e) => {
         e.preventDefaul()
         const postit = {
             title: this.state.title,
             text: this.state.text
         }
+        createPostit(postit)
+            .then((response) => {
+                console.log(response)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
     }
 
     setTitle = (e) => {
@@ -39,24 +47,24 @@ handlePostitClick = () => {
         })
     }
 
-    setText = (event) => {
+    setText = (e) => {
         const inputText = e.target.value
         this.setState({
             tex: inputText//
         })
     }
 
-    class PostIt extends React.Component {
+
         render() {
             return (
                 <div onClick={this.handlePostitClick} className='postit'>
 
-                    <Form onSubmite={this.handlePostitClick}>
+                    <Form onSubmit={this.handlePostitSubmit}>
                         {this.state.editing && (
-                    <button onClick={this.handlePostitRemove}
-                            className='postit__button-remove'>
-                        X
-                    </button>
+                            <button onClick={this.handlePostitRemove}
+                                className='postit__button-remove'>
+                                X
+                             </button>
                         )
                         }
                         <input type='text'
@@ -78,7 +86,6 @@ handlePostitClick = () => {
                      </button>
                     </Form>
                 </div>
-
             )
         }
     }

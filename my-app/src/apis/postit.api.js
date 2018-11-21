@@ -1,11 +1,12 @@
 import api from '../infra/api.config'
 
-export function loginUser(user){
-   const url = '/users/login'
+
+export function createPostit(postit){
+   const url = '/todo'
 
    const data = {
-       login : user.email,
-       password: user.password
+      title : postit.title,
+      desc : postit.text
    }
 
    return api().post(url,data)
